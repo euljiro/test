@@ -1,17 +1,17 @@
-# from collections import deque
+from collections import deque
 
-# case = int(input())
-# card=[]
+case = int(input())
+card=[]
 
-# for i in list(range(1,case+1)):
-#     card.append(i)
-#     dq = deque(card)
-#     for j in range(len(dq)):
-#         dq.popleft()
-#         dq.rotate(-1)
-#         if len(dq) == 1:
-#             break
-# print(dq)
+for i in list(range(1,case+1)):
+    card.append(i)
+    dq = deque(card)
+    for j in range(len(dq)):
+        dq.popleft()
+        dq.rotate(-1)
+        if len(dq) == 1:
+            break
+print(dq)
 
 
 import collections
