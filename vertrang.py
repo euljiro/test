@@ -6,7 +6,7 @@ def sosu(n):
             return False
     return True
 
-all_list = list(range(2,24))
+all_list = list(range(2,246912))
 memo = []
 
 for i in all_list:
