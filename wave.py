@@ -1,10 +1,10 @@
 
 memo = {
     1 : 1,
-    2: 1,
-    3:1,
+    2 : 1,
+    3 : 1,
     4 : 2,
-    5:2,
+    5 : 2,
     6 : 3,
     7 : 4,
     8 : 5,
@@ -25,4 +25,4 @@ case = int(input())
 
 for i in range(case):
     n = int(input())
-    print(wave(n, memo))
+    print(wave(n, memo)) #memo라는 딕셔너리에서 n번째 키값의 밸류 호출
