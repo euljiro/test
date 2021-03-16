@@ -29,17 +29,37 @@
 
 
 
-def mini(a, b):
-    if b == 0:
-        return a
-    else:
-        return mini(b, a%b)
+import math
 
-def maxi(a, b):
-    return a*b//mini(a,b)
+n, k = map(int, input().split())  4개의 구슬  2개의 구슬 뽑는 경우의 수 
 
-case= int(input())
+bino = int(math.factorial(n)/(math.factorial(k)*math.factorial(n-k)))
+
+print(bino)  
+
+
+# ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+import math
+
+case=int(input())
 
 for i in range(case):
-    x, y = map(int, input().split())
-    print(maxi(x, y))
+    k, n = map(int, input().split())
+    bino = int(math.factorial(n)/(math.factorial(k)*math.factorial(n-k)))
+    print(bino)
+
+
+
+
+N, K = list(map(int, input().split()))
+
+up = 1
+for i in range(N, N-K,-1): #-1은 내림차순으로 내려가는것 
+    up *= i
+
+down = 1
+for i in range(1, K+1):
+    down *= i
+
+print(up // down)
