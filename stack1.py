@@ -1,31 +1,73 @@
+# import sys
+# case = int(sys.stdin.readline())
+# stack = []
+
+# for i in range(case):
+    
+#     com = sys.stdin.readline().split()
+
+#     if com[0] == 'push':
+#         stack.append(com[1])
+
+#     elif com[0] == 'pop':
+#         if len(stack) == 0 :
+#             print(-1)
+#         else:
+#             print(stack.pop())
+    
+#     elif com[0] == 'size':
+#         print(len(stack))
+    
+#     elif com[0] == 'empty':
+#         if len(stack) == 0:
+#             print(1)
+#         else:
+#             print(0)
+    
+#     elif com[0] == 'top':
+#         if len(stack)==0:
+#             print(-1)
+#         else:   
+#             print(stack[-1])
+
+
+
 import sys
+from collections import deque
+
 case = int(sys.stdin.readline())
-stack = []
+que = []
 
 for i in range(case):
     
     com = sys.stdin.readline().split()
 
     if com[0] == 'push':
-        stack.append(com[1])
+        que.append(com[1])
 
     elif com[0] == 'pop':
-        if len(stack) == 0 :
+        if len(que) == 0 :
             print(-1)
         else:
-            print(stack.pop())
+            print(que.pop())
     
     elif com[0] == 'size':
-        print(len(stack))
+        print(len(que))
     
     elif com[0] == 'empty':
-        if len(stack) == 0:
+        if len(que) == 0:
             print(1)
         else:
             print(0)
     
-    elif com[0] == 'top':
-        if len(stack)==0:
+    elif com[0] == 'front':
+        if len(que)==0:
             print(-1)
         else:   
-            print(stack[-1])
+            print(que[0])
+
+    elif com[0] == 'back':
+        if len(que)==0:
+            print(-1)
+        else:   
+            print(que[-1])
