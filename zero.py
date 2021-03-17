@@ -39,7 +39,7 @@ for i in range(case):
                 count-=1
 
 
-    if  count==0 and len(stack) ==0 :
+    if  count== 0 and len(stack) == 0 :
         print('YES')
     else:
         print('NO')
