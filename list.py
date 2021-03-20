@@ -16,8 +16,6 @@ for i in range(len(location)):
 
 print(location)
 
-case = int(input())
-location = []
 
 
 case = int(input())
